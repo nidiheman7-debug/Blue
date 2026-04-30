@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysioPro Quiz</title>
+    <link rel="stylesheet" href="blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="side-nav" class="side-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <div class="nav-content">
+            <h3>Settings</h3>
+            <hr>
+            <p>User: <span id="nav-user-name">Scholar</span></p>
+            <button onclick="changeName()">Update Name</button>
+            <hr>
+            <h4>Themes</h4>
+            <div class="nav-links">
+    <button onclick="setTheme('light')">☀️ Light Mode</button>
+    <button onclick="setTheme('dark')">🌙 Dark Mode</button>
+    <button onclick="returnToMenu()">🏠 Main Menu</button>
+</div>
+
+        </div>
+    </div>
+
+    <div class="app-header">
+        <div class="header-left">
+            <div class="menu-btn" onclick="toggleNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo-area">
+                <i class="fas fa-heartbeat"></i>
+                <span class="logo-text">PHYSIOPRO</span>
+            </div>
+        </div>
+        <div class="score-box">
+            Score: <span id="score-display">0</span>
+        </div>
+    </div>
+
+    <main class="container">
+        
+        <div id="start-container" class="card">
+            <div class="badge">University of Jos</div>
+            <h2>Select a Course</h2>
+            <button class="main-btn" onclick="selectCourse('COS101')">COS 101</button>
+            <button class="main-btn" onclick="selectCourse('PHY101')">PHY 101</button>
+            <button class="main-btn" onclick="selectCourse('MTH101')">MTH 101</button>
+            <button class="main-btn" onclick="selectCourse('GST111')">GST 111</button>
+            <button class="main-btn" onclick="selectCourse('BIO101')">BIO 101</button>
+            </div>
+        <div id="quiz-container" class="card hidden">
+            <button id="hint-btn" onclick="showHint()">💡 Hint</button>
+            <div id="hint-text" class="hidden"></div>
+            
+            <h3 id="question-number">Question 1</h3>
+            <p id="question-text">Loading...</p>
+            <div id="answer-grid"></div>
+    <p id="question-text"></p>
+    <div id="answer-grid"></div>
+<div class="nav-buttons">
+    <button id="back-btn" class="nav-btn" onclick="goBack()">Back</button>
+    <button id="next-btn" class="nav-btn" onclick="goNext()">Next</button>
+</div>
+</button>
+    </div>
+</div>
+
+        </div>
+
+        <div id="result-container" class="card hidden">
+            <h2 id="final-score">Results</h2>
+            <button class="main-btn" onclick="returnToMenu()">Main Menu</button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
